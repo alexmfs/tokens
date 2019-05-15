@@ -1,0 +1,68 @@
+@import "variables";
+@import "functions";
+
+
+// testes
+
+section{
+    display: grid;
+    width: 400px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: space();
+    padding: space();
+    background: url(
+        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPklEQVQoU2NkQAPfGb7P5GTgTEcXZ0QWgCnCphiuEF0SnQ9WiMs6ZHFGXIpgToLJo7gR3QPIiolSCNJAtEIA0QIdkE2m84cAAAAASUVORK5CYII=
+    ) repeat;
+    div{
+        padding: space(lg);
+        &:nth-child(1){
+            background: color(base, light);            
+        }
+        &:nth-child(2){
+            background: color(base, base);
+        }
+        &:nth-child(3){
+            background: color(base, dark);
+        }
+        &:nth-child(4){
+            background: color(base, trans);
+        }
+        &:nth-child(5){
+            background: color(primary, light);            
+        }
+        &:nth-child(6){
+            background: color(primary, base);
+        }
+        &:nth-child(7){
+            background: color(primary, dark);
+        }
+        &:nth-child(8){
+            background: color(primary, trans);
+        }
+        &:nth-child(9){
+            background: color(secondary, light);            
+        }
+        &:nth-child(10){
+            background: color(secondary, base);
+        }
+        &:nth-child(11){
+            background: color(secondary, dark);
+        }
+        &:nth-child(12){
+            background: color(secondary, trans);
+        }
+        &:nth-child(13){
+            background: color(negative, light);            
+        }
+        &:nth-child(14){
+            background: color(negative, base);
+        }
+        &:nth-child(15){
+            background: color(negative, dark);
+        }                  
+        &:nth-child(16){
+            background: color(negative, trans);
+        }                  
+    }
+}

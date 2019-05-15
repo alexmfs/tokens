@@ -1,0 +1,62 @@
+$space: .8em;
+
+$spaces: (
+  // non-nested values
+  xm: $space/3,
+  sm: $space/2,
+  md: $space,
+  lg: $space * 3,
+  default: $space
+);
+
+
+$radius: (
+  default: .2em,
+  none: none,
+  small: .25em,
+  medium: .5em,
+  large: 1em,
+  pill: 10em,
+  elipse: 50%
+);
+
+// base color defs
+$color-base: #444444;
+$color-primary: #00B8EA;
+$color-secondary: #0969A2;
+$color-negative: #C34040;
+$color-shade-amount: 15%;
+$color-trans-amount: 0.5;
+
+// color variable map
+$colors: (
+  // non-nested values
+  default: red,
+  body: $color-primary,
+  background: #333,
+  // nested map inception
+  base: (
+    base: $color-base,
+    light: lighten($color-base, $color-shade-amount),
+    dark: darken($color-base, $color-shade-amount),
+    trans: transparentize($color-base, $color-trans-amount)
+  ),  
+  primary: (
+    base: $color-primary,
+    light: lighten($color-primary, $color-shade-amount),
+    dark: darken($color-primary, $color-shade-amount),
+    trans: transparentize($color-primary, $color-trans-amount)
+  ),
+  secondary: (
+    base: $color-secondary,
+    light: lighten($color-secondary, $color-shade-amount),
+    dark: darken($color-secondary, $color-shade-amount),
+    trans: transparentize($color-secondary, $color-trans-amount)
+  ),
+  negative: (
+    base: $color-negative,
+    light: lighten($color-negative, $color-shade-amount),
+    dark: darken($color-negative, $color-shade-amount),
+    trans: transparentize($color-negative, $color-trans-amount)
+  )  
+);
