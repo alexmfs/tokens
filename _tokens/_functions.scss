@@ -13,17 +13,21 @@
   }
   
   @function space($name:null, $variant:null) {
-    @return token($spaces, $name, $variant)
+    @return token($spaces, $name, $variant);
   }
   
   @function color($name:null, $variant:null) {
-    @return token($colors, $name, $variant)
+    @return token($colors, $name, $variant);
   }
   
   @function radius($name:null, $variant:null) {
-    @return token($radius, $name, $variant)
+    @return token($radius, $name, $variant);
   }
   
   @function font-size($name:null, $variant:null) {
-    @return token($radius, $name, $variant)
+    @return token($font-size, $name, $variant);
+  }
+
+  @function border($name:null, $variant:null) {
+    @return token($border, $name, $variant);
   }

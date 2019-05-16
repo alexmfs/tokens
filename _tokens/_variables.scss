@@ -2,7 +2,7 @@ $space: .8em;
 
 $spaces: (
   // non-nested values
-  xm: $space/3,
+  xs: $space/3,
   sm: $space/2,
   md: $space,
   lg: $space * 3,
@@ -13,11 +13,15 @@ $spaces: (
 $radius: (
   default: .2em,
   none: none,
-  small: .25em,
-  medium: .5em,
-  large: 1em,
+  sm: .25em,
+  md: .5em,
+  lg: 1em,
   pill: 10em,
   elipse: 50%
+);
+
+$border: (
+  default: 1px solid
 );
 
 // base color defs

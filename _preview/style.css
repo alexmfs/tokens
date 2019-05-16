@@ -1,61 +1,144 @@
-section {
-  display: grid;
-  width: 400px;
-  margin: 0 auto;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.8em;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*, *::before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.button {
   padding: 0.8em;
+  text-decoration: none;
+  color: #00B8EA;
+  border: 1px solid;
+  border-radius: 0.2em;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font: 100 1.6rem Arial;
+}
+
+section {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0.8em;
+}
+section.colors {
+  display: grid;
+  grid-gap: 0.8em;
+  grid-template-columns: repeat(4, 1fr);
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPklEQVQoU2NkQAPfGb7P5GTgTEcXZ0QWgCnCphiuEF0SnQ9WiMs6ZHFGXIpgToLJo7gR3QPIiolSCNJAtEIA0QIdkE2m84cAAAAASUVORK5CYII=) repeat;
 }
-section div {
-  padding: 2.4em;
+section.colors:hover {
+  background: none;
 }
-section div:nth-child(1) {
+section.colors div {
+  height: 100px;
+}
+section.colors div:nth-child(1) {
   background: #6a6a6a;
+  border-radius: 0.2em;
 }
-section div:nth-child(2) {
+section.colors div:nth-child(2) {
   background: #444444;
+  border-radius: 0.5em;
 }
-section div:nth-child(3) {
+section.colors div:nth-child(3) {
   background: #1e1e1e;
+  border-radius: 1em;
 }
-section div:nth-child(4) {
+section.colors div:nth-child(4) {
   background: rgba(68, 68, 68, 0.5);
+  border-radius: 10em;
 }
-section div:nth-child(5) {
+section.colors div:nth-child(5) {
   background: #38d4ff;
 }
-section div:nth-child(6) {
+section.colors div:nth-child(6) {
   background: #00B8EA;
 }
-section div:nth-child(7) {
+section.colors div:nth-child(7) {
   background: #007c9e;
 }
-section div:nth-child(8) {
+section.colors div:nth-child(8) {
   background: rgba(0, 184, 234, 0.5);
 }
-section div:nth-child(9) {
+section.colors div:nth-child(9) {
   background: #0d98ea;
 }
-section div:nth-child(10) {
+section.colors div:nth-child(10) {
   background: #0969A2;
 }
-section div:nth-child(11) {
+section.colors div:nth-child(11) {
   background: #053a5a;
 }
-section div:nth-child(12) {
+section.colors div:nth-child(12) {
   background: rgba(9, 105, 162, 0.5);
 }
-section div:nth-child(13) {
+section.colors div:nth-child(13) {
   background: #d57a7a;
 }
-section div:nth-child(14) {
+section.colors div:nth-child(14) {
   background: #C34040;
 }
-section div:nth-child(15) {
+section.colors div:nth-child(15) {
   background: #8b2c2c;
 }
-section div:nth-child(16) {
+section.colors div:nth-child(16) {
   background: rgba(195, 64, 64, 0.5);
 }
 
