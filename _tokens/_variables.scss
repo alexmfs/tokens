@@ -5,10 +5,10 @@ $spaces: (
   xs: $space/3,
   sm: $space/2,
   md: $space,
-  lg: $space * 3,
+  lg: $space * 2,
+  xl: $space * 3,
   default: $space
 );
-
 
 $radius: (
   default: .2em,
@@ -38,6 +38,7 @@ $colors: (
   default: red,
   body: $color-primary,
   background: #333,
+  light: #fff,
   // nested map inception
   base: (
     base: $color-base,

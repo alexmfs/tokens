@@ -7,6 +7,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <script>
+
+        window.onload = function (e) {
+
+            // buttons wave
+
+            var buttons = document.getElementsByClassName('button');
+
+            Array.prototype.forEach.call(buttons, function (b) {
+                b.addEventListener('click', createWave);
+            });
+
+            function createWave(e) {
+                var circle = document.createElement('div');
+                this.appendChild(circle);
+
+                var d = Math.max(this.clientWidth, this.clientHeight);
+
+                circle.style.width = circle.style.height = d + 'px';
+
+                var rect = this.getBoundingClientRect();
+                circle.style.left = e.clientX - rect.left - d / 2 + 'px';
+                circle.style.top = e.clientY - rect.top - d / 2 + 'px';
+
+                circle.classList.add('wave');
+                window.setTimeout(function () { circle.remove(); }, 1000);
+            }
+
+        }
+    </script>
 </head>
 
 <body>
@@ -48,6 +78,10 @@
     </section>
     <section>
         <a href="#" class="button">Button</a>
+        <a href="#" class="button">Button</a>
+        <a href="#" class="button">Button</a>
+        <a href="#" class="button">Button</a>
+        <button class="button">Button</button>
     </section>
 </body>
 
