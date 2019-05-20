@@ -4,39 +4,43 @@
     color: color(primary, base);
     border: border();
     border-radius: radius();
+    transition: time();
     // specific
-    display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
     min-width: 100px;
     text-align: center;
     overflow: hidden;
     position: relative;
-    transition: 0.5s;
-
+    display: inline-block;
+    vertical-align: top;
     // default body
     font: inherit;
     // context
     + .button{
         margin-left: space();
     }
+    &:focus{
+        outline: none;
+    }
     &:hover{
+        border-color: color(primary, base);
         background: color(primary, base);
         color: color(light);
-      }
-  }
+    }
+}
   
-  .wave {
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.7);
-      position: absolute;
-      transform: scale(0);
-      animation: wave 0.6s linear;
-  }
+.wave {
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    transform: scale(0);
+    animation: wave 0.6s linear;
+}
   
-  @keyframes wave {
-      to {
-          transform: scale(2.5);
-          opacity: 0;
-      }
-  }
+@keyframes wave {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}

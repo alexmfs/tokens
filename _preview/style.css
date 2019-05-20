@@ -61,20 +61,25 @@ table {
   color: #00B8EA;
   border: 1px solid;
   border-radius: 0.2em;
-  display: inline-block;
+  transition: 1s;
   text-decoration: none;
   text-transform: uppercase;
   min-width: 100px;
   text-align: center;
   overflow: hidden;
   position: relative;
-  transition: 0.5s;
+  display: inline-block;
+  vertical-align: top;
   font: inherit;
 }
 .button + .button {
   margin-left: 0.8em;
 }
+.button:focus {
+  outline: none;
+}
 .button:hover {
+  border-color: #00B8EA;
   background: #00B8EA;
   color: #fff;
 }
@@ -117,6 +122,8 @@ section.colors:hover {
 }
 section.colors div {
   height: 100px;
+  padding: 0.8em;
+  color: #fff;
 }
 section.colors div:nth-child(1) {
   background: #6a6a6a;

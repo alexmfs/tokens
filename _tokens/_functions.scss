@@ -31,3 +31,7 @@
   @function border($name:null, $variant:null) {
     @return token($border, $name, $variant);
   }
+
+  @function time($name:null, $variant:null) {
+    @return token($times, $name, $variant);
+  }

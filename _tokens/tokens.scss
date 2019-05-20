@@ -30,6 +30,8 @@ section{
         }      
         div{
             height: 100px;
+            padding: space();
+            color: color(light);
             &:nth-child(1){
                 background: color(base, light);
                 border-radius: radius();          

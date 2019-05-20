@@ -65,3 +65,15 @@ $colors: (
     trans: transparentize($color-negative, $color-trans-amount)
   )  
 );
+
+$time: 1s;
+
+$times: (
+  // non-nested values
+  xs: $time/3,
+  sm: $time/2,
+  md: $time,
+  lg: $time * 2,
+  xl: $time * 3,
+  default: $time
+);
