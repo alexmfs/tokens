@@ -1,0 +1,29 @@
+.header{
+    background: color(primary, base);
+    padding: space();
+    position: relative;
+    &:after {
+        content: "";
+        height: 200%;
+        display: block;
+        background: #00B8EA;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }    
+    > .wrap{
+        display: flex;    
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.user-box{
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

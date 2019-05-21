@@ -1,0 +1,9 @@
+.footer{
+    border-top: 1px solid #000;
+    padding: space();
+    > .wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

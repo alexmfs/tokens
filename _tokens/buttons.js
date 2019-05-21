@@ -1,21 +1,27 @@
-var buttons = document.getElementsByClassName('button');
+window.onload = function (e) {
 
-Array.prototype.forEach.call(buttons, function (b) {
-    b.addEventListener('click', createWave);
-});
+    // buttons wave
 
-function createWave(e) {
-    var circle = document.createElement('div');
-    this.appendChild(circle);
+    var buttons = document.getElementsByClassName('button');
 
-    var d = Math.max(this.clientWidth, this.clientHeight);
+    Array.prototype.forEach.call(buttons, function (b) {
+        b.addEventListener('click', createWave);
+    });
 
-    circle.style.width = circle.style.height = d + 'px';
+    function createWave(e) {
+        var circle = document.createElement('div');
+        this.appendChild(circle);
 
-    var rect = this.getBoundingClientRect();
-    circle.style.left = e.clientX - rect.left - d / 2 + 'px';
-    circle.style.top = e.clientY - rect.top - d / 2 + 'px';
+        var d = Math.max(this.clientWidth, this.clientHeight);
 
-    circle.classList.add('wave');
-    window.setTimeout(function () { circle.remove(); }, 1000);
+        circle.style.width = circle.style.height = d + 'px';
+
+        var rect = this.getBoundingClientRect();
+        circle.style.left = e.clientX - rect.left - d / 2 + 'px';
+        circle.style.top = e.clientY - rect.top - d / 2 + 'px';
+
+        circle.classList.add('wave');
+        window.setTimeout(function () { circle.remove(); }, 1000);
+    }
+
 }

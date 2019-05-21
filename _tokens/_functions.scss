@@ -1,37 +1,37 @@
 @function token($token, $name:null, $variant:null) {
-    // space variant is optional
-    @if ($name != null){
-      @if ($variant != null) {
-        // map inception
-        @return map-get(map-get($token, $name), $variant);
-      } @else {
-        @return map-get($token, $name);
-      }
-    } @else{
-      @return map-get($token, default);
+  // space variant is optional
+  @if ($name != null){
+    @if ($variant != null) {
+      // map inception
+      @return map-get(map-get($token, $name), $variant);
+    } @else {
+      @return map-get($token, $name);
     }
+  } @else{
+    @return map-get($token, default);
   }
-  
-  @function space($name:null, $variant:null) {
-    @return token($spaces, $name, $variant);
-  }
-  
-  @function color($name:null, $variant:null) {
-    @return token($colors, $name, $variant);
-  }
-  
-  @function radius($name:null, $variant:null) {
-    @return token($radius, $name, $variant);
-  }
-  
-  @function font-size($name:null, $variant:null) {
-    @return token($font-size, $name, $variant);
-  }
+}
 
-  @function border($name:null, $variant:null) {
-    @return token($border, $name, $variant);
-  }
+@function space($name:null, $variant:null) {
+  @return token($spaces, $name, $variant);
+}
 
-  @function time($name:null, $variant:null) {
-    @return token($times, $name, $variant);
-  }
+@function color($name:null, $variant:null) {
+  @return token($colors, $name, $variant);
+}
+
+@function radius($name:null, $variant:null) {
+  @return token($radius, $name, $variant);
+}
+
+@function font-size($name:null, $variant:null) {
+  @return token($font-size, $name, $variant);
+}
+
+@function border($name:null, $variant:null) {
+  @return token($border, $name, $variant);
+}
+
+@function time($name:null, $variant:null) {
+  @return token($times, $name, $variant);
+}

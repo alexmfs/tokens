@@ -6,83 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="../_tokens/buttons.js"></script>
     <title>Document</title>
-    <script>
-
-        window.onload = function (e) {
-
-            // buttons wave
-
-            var buttons = document.getElementsByClassName('button');
-
-            Array.prototype.forEach.call(buttons, function (b) {
-                b.addEventListener('click', createWave);
-            });
-
-            function createWave(e) {
-                var circle = document.createElement('div');
-                this.appendChild(circle);
-
-                var d = Math.max(this.clientWidth, this.clientHeight);
-
-                circle.style.width = circle.style.height = d + 'px';
-
-                var rect = this.getBoundingClientRect();
-                circle.style.left = e.clientX - rect.left - d / 2 + 'px';
-                circle.style.top = e.clientY - rect.top - d / 2 + 'px';
-
-                circle.classList.add('wave');
-                window.setTimeout(function () { circle.remove(); }, 1000);
-            }
-
-        }
-    </script>
 </head>
 
 <body>
-    <section class="colors">
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-        <div>div</div>
-    </section>
-    <section class="fonts">
-        <h1>Title H1</h1>
-        <h2>Title H2</h2>
-        <h3>Title H3</h3>
-        <h4>Title H4</h4>
-        <h5>Title H5</h5>
-        <h6>Title H6</h6>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit vero quos accusantium beatae
-            iste illo, accusamus aperiam eum fuga recusandae. Id ipsa cumque veniam corporis magnam porro quaerat
-            obcaecati.</p>
-        <ul>
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Eligendi corrupti reiciendis tempora.</li>
-            <li>Amet quaerat enim repellat qui nesciunt sapiente itaque</li>
-            <li>cupiditate eos vitae voluptatibus.</li>
-            <li>Eum dicta possimus et perspiciatis odio.</li>
-        </ul>
-    </section>
-    <section>
-        <a href="#" class="button">Button</a>
-        <a href="#" class="button">Button</a>
-        <a href="#" class="button">Button</a>
-        <a href="#" class="button">Button</a>
-        <button class="button">Button</button>
-    </section>
+
+    <header class="header">
+        <div class="wrap">
+            <div class="brand">
+                <a class="active" title="Acredite.se" id="logo" href="/">
+                    <img src="data:image/png;base64,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"
+                        class="App-logo" alt="Acredite.se">
+                </a>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav">
+                    <li>Documentos
+                        <ul class="submenu">
+                            <li><a class="active" aria-current="page" title="Documentos" href="/folders">Documentos</a>
+                            </li>
+                            <li><a title="Arquivo morto" href="/documents/archived/">Arquivo morto</a></li>
+                            <li><a title="Lixeira" href="/documents/trash">Lixeira</a></li>
+                        </ul>
+                    </li>
+                    <li class="withoutarrow"><a title="Normas" href="/standards">Normas</a></li>
+                    <li>Usuários
+                        <ul class="submenu">
+                            <li><a title="Equipes" href="/teams">Equipes</a></li>
+                            <li><a title="Usuários" href="/users">Usuários</a></li>
+                        </ul>
+                    </li>
+                    <li>Relatório
+                        <ul class="submenu">
+                            <li><a title="Download" href="/documents/downloads">Download</a></li>
+                            <li><a title="Impressão" href="/documents/printing">Impressão</a></li>
+                            <li><a title="Leitura de documentos" href="/reports/readings-documents/">Leitura de
+                                    documentos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="user-box">
+                <a class="config-tip" title="Configurações" id="config-tip" href="/settings/client/update/">a</a>
+                <a title="Acredite.se" id="notifications-tip" href="/notification">b</a>
+                <span id="user-tip" class="user-tip"><img alt="Usuário" src="/static/media/nopic.60042a18.png"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="colors card">
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+            <div>div</div>
+        </section>
+        <section class="fonts card">
+            <h1>Title H1</h1>
+            <h2>Title H2</h2>
+            <h3>Title H3</h3>
+            <h4>Title H4</h4>
+            <h5>Title H5</h5>
+            <h6>Title H6</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit vero quos accusantium beatae
+                iste illo, accusamus aperiam eum fuga recusandae. Id ipsa cumque veniam corporis magnam porro quaerat
+                obcaecati.</p>
+            <ul>
+                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Eligendi corrupti reiciendis tempora.</li>
+                <li>Amet quaerat enim repellat qui nesciunt sapiente itaque</li>
+                <li>cupiditate eos vitae voluptatibus.</li>
+                <li>Eum dicta possimus et perspiciatis odio.</li>
+            </ul>
+        </section>
+        <section class="card">
+            <a href="#" class="button">Button</a>
+            <a href="#" class="button">Button</a>
+            <a href="#" class="button">Button</a>
+            <a href="#" class="button">Button</a>
+            <button class="button">Button</button>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="wrap">
+            <p>Acredite.se © 2019 - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>

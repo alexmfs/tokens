@@ -1,7 +1,11 @@
-@import "variables";
-@import "functions";
-@import "reset";
-@import "buttons";
+@import 
+    'variables',
+    'functions',
+    'reset',
+    'buttons',
+    'molecules/header',
+    'molecules/footer'
+    ;
 
 :root{
     font-size: 62.5%;
@@ -11,23 +15,34 @@ body {
     font: 100 1.6rem Arial;
 }
 
+.wrap{
+    max-width: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    padding: space();
+}
+
+.main{
+    @extend .wrap;
+    display: grid;
+    grid-gap: space(lg)
+}
+
+.card{
+    padding: space(lg);
+    border: 1px solid color(primary, base);
+    border-radius: radius();
+    background: #fff;
+}
+
 
 // testes
 
 section{
-    width: 960px;
-    margin: 0 auto;
-    padding: space();
     &.colors{
         display: grid;
         grid-gap: space();
-        grid-template-columns: repeat(4, 1fr);
-        background: url(
-            data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPklEQVQoU2NkQAPfGb7P5GTgTEcXZ0QWgCnCphiuEF0SnQ9WiMs6ZHFGXIpgToLJo7gR3QPIiolSCNJAtEIA0QIdkE2m84cAAAAASUVORK5CYII=
-        ) repeat;
-        &:hover{
-            background: none;
-        }      
+        grid-template-columns: repeat(4, 1fr);   
         div{
             height: 100px;
             padding: space();
@@ -89,4 +104,8 @@ section{
     &.fonts{
 
     }
+}
+
+h1{
+    margin-bottom: space();
 }
