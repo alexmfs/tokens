@@ -1,0 +1,41 @@
+@import 
+    '_tokens/variables',
+    '_tokens/functions',
+    '_tokens/reset',
+    'atoms/buttons',
+    'molecules/header',
+    'molecules/footer',
+    'pages/home'
+    ;
+
+:root{
+    font-size: 62.5%;
+}
+
+body {
+    font: 100 1.6rem Arial;
+}
+
+.wrap{
+    max-width: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    padding: space();
+}
+
+.main{
+    @extend .wrap;
+    display: grid;
+    grid-gap: space(lg)
+}
+
+.card{
+    padding: space(lg);
+    border: 1px solid color(primary, base);
+    border-radius: radius();
+    background: #fff;
+}
+
+h1{
+    margin-bottom: space();
+}

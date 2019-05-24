@@ -1,3 +1,13 @@
+/* Space
+   ========================================================================== */
+/* Radius
+   ========================================================================== */
+/* Color
+   ========================================================================== */
+/* Time
+   ========================================================================== */
+/* Border
+   ========================================================================== */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -61,7 +71,7 @@ table {
   color: #00B8EA;
   border: 1px solid;
   border-radius: 0.2em;
-  transition: 1s;
+  transition: 0.5s;
   text-decoration: none;
   text-transform: uppercase;
   min-width: 100px;
@@ -138,6 +148,68 @@ table {
   justify-content: space-between;
 }
 
+.page-home section.colors {
+  display: grid;
+  grid-gap: 0.8em;
+  grid-template-columns: repeat(4, 1fr);
+}
+.page-home section.colors div {
+  height: 100px;
+  padding: 0.8em;
+  color: #fff;
+}
+.page-home section.colors div:nth-child(1) {
+  background: #6a6a6a;
+  border-radius: 0.2em;
+}
+.page-home section.colors div:nth-child(2) {
+  background: #444444;
+  border-radius: 0.5em;
+}
+.page-home section.colors div:nth-child(3) {
+  background: #1e1e1e;
+  border-radius: 1em;
+}
+.page-home section.colors div:nth-child(4) {
+  background: rgba(68, 68, 68, 0.5);
+  border-radius: 10em;
+}
+.page-home section.colors div:nth-child(5) {
+  background: #38d4ff;
+}
+.page-home section.colors div:nth-child(6) {
+  background: #00B8EA;
+}
+.page-home section.colors div:nth-child(7) {
+  background: #007c9e;
+}
+.page-home section.colors div:nth-child(8) {
+  background: rgba(0, 184, 234, 0.5);
+}
+.page-home section.colors div:nth-child(9) {
+  background: #0d98ea;
+}
+.page-home section.colors div:nth-child(10) {
+  background: #0969A2;
+}
+.page-home section.colors div:nth-child(11) {
+  background: #053a5a;
+}
+.page-home section.colors div:nth-child(12) {
+  background: rgba(9, 105, 162, 0.5);
+}
+.page-home section.colors div:nth-child(13) {
+  background: #d57a7a;
+}
+.page-home section.colors div:nth-child(14) {
+  background: #C34040;
+}
+.page-home section.colors div:nth-child(15) {
+  background: #8b2c2c;
+}
+.page-home section.colors div:nth-child(16) {
+  background: rgba(195, 64, 64, 0.5);
+}
 :root {
   font-size: 62.5%;
 }
@@ -165,68 +237,6 @@ body {
   background: #fff;
 }
 
-section.colors {
-  display: grid;
-  grid-gap: 0.8em;
-  grid-template-columns: repeat(4, 1fr);
-}
-section.colors div {
-  height: 100px;
-  padding: 0.8em;
-  color: #fff;
-}
-section.colors div:nth-child(1) {
-  background: #6a6a6a;
-  border-radius: 0.2em;
-}
-section.colors div:nth-child(2) {
-  background: #444444;
-  border-radius: 0.5em;
-}
-section.colors div:nth-child(3) {
-  background: #1e1e1e;
-  border-radius: 1em;
-}
-section.colors div:nth-child(4) {
-  background: rgba(68, 68, 68, 0.5);
-  border-radius: 10em;
-}
-section.colors div:nth-child(5) {
-  background: #38d4ff;
-}
-section.colors div:nth-child(6) {
-  background: #00B8EA;
-}
-section.colors div:nth-child(7) {
-  background: #007c9e;
-}
-section.colors div:nth-child(8) {
-  background: rgba(0, 184, 234, 0.5);
-}
-section.colors div:nth-child(9) {
-  background: #0d98ea;
-}
-section.colors div:nth-child(10) {
-  background: #0969A2;
-}
-section.colors div:nth-child(11) {
-  background: #053a5a;
-}
-section.colors div:nth-child(12) {
-  background: rgba(9, 105, 162, 0.5);
-}
-section.colors div:nth-child(13) {
-  background: #d57a7a;
-}
-section.colors div:nth-child(14) {
-  background: #C34040;
-}
-section.colors div:nth-child(15) {
-  background: #8b2c2c;
-}
-section.colors div:nth-child(16) {
-  background: rgba(195, 64, 64, 0.5);
-}
 h1 {
   margin-bottom: 0.8em;
 }

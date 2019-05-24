@@ -1,3 +1,4 @@
+// token gerenator
 @function token($token, $name:null, $variant:null) {
   // space variant is optional
   @if ($name != null){
@@ -12,19 +13,21 @@
   }
 }
 
+// tokens
+
 @function space($name:null, $variant:null) {
-  @return token($spaces, $name, $variant);
+  @return token($space, $name, $variant);
 }
 
 @function color($name:null, $variant:null) {
-  @return token($colors, $name, $variant);
+  @return token($color, $name, $variant);
 }
 
 @function radius($name:null, $variant:null) {
   @return token($radius, $name, $variant);
 }
 
-@function font-size($name:null, $variant:null) {
+@function fontSize($name:null, $variant:null) {
   @return token($font-size, $name, $variant);
 }
 
@@ -33,5 +36,9 @@
 }
 
 @function time($name:null, $variant:null) {
-  @return token($times, $name, $variant);
+  @return token($time, $name, $variant);
+}
+
+@function shadow($name:null, $variant:null) {
+  @return token($shadows, $name, $variant);
 }

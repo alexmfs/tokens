@@ -1,6 +1,10 @@
+
+/* Space
+   ========================================================================== */
+
 $space: .8em;
 
-$spaces: (
+$space: (
   // non-nested values
   xs: $space/3,
   sm: $space/2,
@@ -9,6 +13,9 @@ $spaces: (
   xl: $space * 3,
   default: $space
 );
+
+/* Radius
+   ========================================================================== */
 
 $radius: (
   default: .2em,
@@ -20,9 +27,8 @@ $radius: (
   elipse: 50%
 );
 
-$border: (
-  default: 1px solid
-);
+/* Color
+   ========================================================================== */
 
 // base color defs
 $color-base: #444444;
@@ -33,7 +39,7 @@ $color-shade-amount: 15%;
 $color-trans-amount: 0.5;
 
 // color variable map
-$colors: (
+$color: (
   // non-nested values
   default: red,
   body: $color-primary,
@@ -66,9 +72,12 @@ $colors: (
   )  
 );
 
-$time: 1s;
+/* Time
+   ========================================================================== */
 
-$times: (
+$time: .5s;
+
+$time: (
   // non-nested values
   xs: $time/3,
   sm: $time/2,
@@ -77,3 +86,16 @@ $times: (
   xl: $time * 3,
   default: $time
 );
+
+/* Border
+   ========================================================================== */
+
+$borderW: 1px;
+
+$border: (
+  default: $borderW solid,
+  stroke: $borderW * 2 solid,
+);
+
+
+$shadow: 0 0px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
